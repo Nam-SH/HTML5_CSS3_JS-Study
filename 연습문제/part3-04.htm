@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+</head> 
+<body>
+  <pre><form>      
+      학생이름 : <input id="name" type="text" />  <br> 
+      패스워드 : <input id="pw" type="password" /> <hr> 
+      <input type="button" value="로그-인"  onclick="login()" />  <input type="reset" value="다시하기"/>         
+</body> 
+<script>
+   function Member(name, password) {
+     this.name = name; 
+     this.password = password; 
+   } 
+ 
+   var members = []; 
+   members[0] = new Member('조동영', 12345);  
+   members[1] = new Member('홍당무', 54321); 
+   members[2] = new Member('주성치', 12123); 
+   members[3] = new Member('홍경인', 11111);  
+ 
+   function login() { 
+      var checkName = false, checkPassword=false; 
+      var name1 = document.getElementById("name").value; 
+      var pass = document.getElementById("pw").value; 
+      for ( var i in members) { 
+          if (members[i].name == name1) { 
+                checkName=true; 
+                if (members[i].password == pass) checkPassword = true; 
+          } 
+      } 
+      if (!checkName) alert("사용자님은 회원이 아닙니다 !"); 
+      else if ( !checkPassword)  alert("패스워드가 틀렸습니다 !"); 
+      else alert("사용님이 회원임을 확인했습니다 !"); 
+   } 
+ </script>
+</html> 

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>자바스크립트 코드구조</title>  
+ 
+  <script>
+    //  문자열 변수 정의  
+    var txt = " 자바스크립트 프로그래밍을 시작합니다."; 
+
+    /* 자바스크립트 함수  welcome() 정의 
+       <p> 태그내용으로 문자열변수 txt 를 지정함  */  
+    function welcome() {
+       document.getElementById("demo").innerHTML = txt;       
+    }       
+  </script> 
+</head>
+<body>
+  <h3> Welcome to Javascript !</h3>  
+  <button type="button" onclick="welcome();"> Start learning</button>
+  <p id="demo"></p>  
+</body>
+</html> 

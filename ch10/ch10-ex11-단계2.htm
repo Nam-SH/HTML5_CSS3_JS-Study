@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>  
+<script src='https://code.jquery.com/jquery-3.1.1.js'></script>    
+</head>
+<body>   
+<canvas id="c1" width="300" height="300" >
+</canvas>
+<script>
+   var c = document.getElementById("c1"); 
+   var obj = c.getContext("2d"); 
+   obj.translate(150, 150);
+ 
+   clock();  
+
+
+   function clock() {     
+     obj.beginPath();     
+     obj.rect(-120, -120, 240, 240);    
+     obj.lineWidth = 15;
+     obj.strokeStyle = 'peru'; 
+     obj.stroke();   
+     obj.beginPath();
+     obj.arc(0, 0, 15, 0, 2*Math.PI);
+     obj.fillStyle = 'black'; obj.fill();
+   }
+   
+ 
+
+
+
+</script>
+
+</body>
+</html> 
+

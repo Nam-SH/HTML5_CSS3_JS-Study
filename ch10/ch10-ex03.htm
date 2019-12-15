@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <script src='https://code.jquery.com/jquery-3.1.1.js'></script>    
+</head>
+<body>
+<canvas id="c1" width="500" height="300" style="border:1px solid gray;"/> 
+<script>  
+  var c=document.getElementById("c1");
+  var obj=c.getContext("2d");
+ 
+  // 선형 그레디언트 객체 생성 
+  var grdObj1 = obj.createLinearGradient(0,0,200,0);   
+  grdObj1.addColorStop(0, "white"); 
+  grdObj1.addColorStop(1, "black"); 
+  obj.fillStyle=grdObj1; 
+  obj.fillRect(50, 120, 200, 150);   
+      
+  // 원형 그레디언트 객체 생성
+  var grdObj2 = obj.createRadialGradient(70,70,20,100,100,150);    
+  grdObj2.addColorStop(0, "white"); 
+  grdObj2.addColorStop(1, "black"); 
+  obj.fillStyle=grdObj2; 
+  obj.fillRect(20, 20, 200, 150);     
+
+  // 이미지 패턴 지정  
+  var imgObj = new Image(); 
+  imgObj.src= "./image/image1.jpg"; 
+  imgObj.onload = function () {   
+    var patternObj = obj.createPattern(imgObj,"repeat");  
+    obj.rect(280, 50, 200, 150);   
+    obj.fillStyle=patternObj;  
+    obj.fill(); 
+  };     
+   
+</script> 
+  </body>
+</html> 

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+ <script src='https://code.jquery.com/jquery-3.1.1.js'></script>    
+ <script>     
+      $(document).ready(function() {          
+          $('#b1').click(function() {
+             var obj1 = $('#p1 img:last'); 
+             $('#p1 img:first-child').clone().insertAfter(obj1);            
+             $('#p1 img:first-child').remove();
+          });          
+      });        
+  </script>
+</head>
+
+
+
+<body>
+  <h3> 피겨선수의 회전 연속동작 <h3> 
+  <hr>
+  <div id="p1"> 
+     <img src="./image/f7.png" width=50 height=70 /> 
+     <img src="./image/f6.png" width=50 height=70 /> 
+     <img src="./image/f5.png" width=50 height=70 /> 
+     <img src="./image/f4.png" width=50 height=70 /> 
+     <img src="./image/f3.png" width=50 height=70 />      
+     <img src="./image/f2.png" width=50 height=70 /> 
+     <img src="./image/f1.png" width=50 height=70 />            
+  </div>
+  <hr>  <button id="b1" >Start</button>  
+ 
+      
+     
+  </script> 
+</body>
+</html> 

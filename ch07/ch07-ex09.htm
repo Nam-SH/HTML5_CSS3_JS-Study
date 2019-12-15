@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+<script> 
+   var obj = new Object();  
+
+   obj.name = "조민규";  obj.major = "건축공학";   
+   
+   document.write("obj의 constructor: "); 
+   document.write(obj.constructor + "<br>"); 
+
+   document.write("obj의 toString():  ");   
+   document.write(obj.toString()); // 상속 메서드  
+   document.write("<br>"); 
+
+   // toString() 재정의  
+   obj.toString  = function() {       
+      document.write("{ name: " + this.name  + ", major: " + this.major + " }<br>"); 
+   };  
+
+   document.write("obj의 toString(): "); 
+   document.write(obj.toString());  // 재정의 메서드   
+</script>
+
+</body>
+</html>
+
+ 

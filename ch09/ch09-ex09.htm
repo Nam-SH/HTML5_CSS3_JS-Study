@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>       
+  function changeOn() { 
+     $("#light").attr("src", "./image/lighton.png");
+  } ; 
+
+  $(document).ready(function() { 
+    $("#b1").click(changeOn); 
+    $("#b2").click(function(){ 
+       $("#light").attr("src", "./image/lightoff.png");
+    });     
+  }); 
+</script>
+</head>
+<body>
+<h3>What Can JavaScript Do ?</h3>
+<button id="b1">전구켜기</button>
+<img id="light" src="./image/lightoff.png" style="width:70px">
+<button id="b2">전구끄기</button>
+</body>
+</html>

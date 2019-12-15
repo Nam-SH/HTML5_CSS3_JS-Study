@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<body>    
+  <script>  
+      var a="globalA", b="globalB", c="globalC" ;       
+      function f1() { 
+         var b="localB"; 
+         var d="localD"; 
+ 
+         document.write("함수 f1() 내부에서 출력<br>"); 
+         document.write("a=" + a + "<br>");  
+         document.write("b=" + b + "<br>"); 
+         document.write("this.b=" + this.b + "<br>"); 
+         document.write("c=" + c + "<br>");          
+         document.write("d=" + d + "<br><hr>"); 
+      } 
+ 
+      f1(); 
+      document.write("함수 f1() 외부에서 출력<br>"); 
+      document.write("a=" + a + "<br>");  
+      document.write("b=" + b + "<br>"); 
+      document.write("this.b=" + this.b + "<br>"); 
+      document.write("c=" + c + "<br>");          
+      document.write("d=" + d + "<br><hr>"); 
+  </script> 
+</body>
+</html> 

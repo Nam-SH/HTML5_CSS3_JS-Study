@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+  영 문 명 : <input type="text" id="fname"
+                    onfocus="f1();"
+                    onblur="f2()" /><br> 
+  연 락 처 : <input type="text" /> 
+<script>
+  function f1() {  
+    var x = document.getElementById("fname");
+    x.style.background = "gray";  }
+
+  function f2() {
+      var x = document.getElementById("fname");
+      x.style.background = "white"; 
+      x.value = x.value.toUpperCase();
+    }
+</script>
+</body>
+</html>

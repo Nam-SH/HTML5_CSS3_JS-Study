@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+ <script src='https://code.jquery.com/jquery-3.1.1.js'></script>   
+<script> 
+
+$(document).ready( function() {
+ 
+ $("div").css({ 
+       'background' : 'skyblue',
+       'width':'100px',
+       'height':'100px',
+       'position': 'absolute' 
+    }); 
+
+ $("#b1").click(function(){
+    $("div").animate({ left: '250px', opacity: '0.5', height: '150px', width: '150px' });
+ }); 
+
+
+ $("#b2").click(function(){
+    $("div").animate({ left: '250px', height: '+=150px', width: '+=150px' });
+ }); 
+ 
+ $("#b3").click(function(){ 
+    $("div").animate({ height: 'toggle' });
+ }); 
+
+ $("#b4").click(function(){
+    var div = $("div");
+    div.animate({height: '300px', opacity: '0.4'}, "slow");
+    div.animate({width: '300px', opacity: '0.8'}, "slow");
+    div.animate({height: '100px', opacity: '0.4'}, "slow");
+    div.animate({width: '100px', opacity: '0.8'}, "slow");
+ }); 
+  
+
+}); 
+</script>
+</head>
+<body> 
+<button id="b1" >Start Animation 1</button> 
+<button id="b2" >Start Animation 2</button>
+<button id="b3" >Start Animation 3</button>
+<button id="b4" >Start Animation 4</button>
+<hr>
+ 
+<div></div>
+</body>
+</html> 

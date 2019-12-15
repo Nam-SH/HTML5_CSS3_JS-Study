@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+ 
+<body> 
+  <button  onclick="startWorker();"> 500보다 큰 소수 찾기(Start Worker)</button> 
+<button  onclick="stopWorker();"> 종료(Stop Worker)</button>
+<p> 결과 : <span id="result"></span></p>
+
+<script>
+  var w;
+
+  function startWorker() {
+     if (typeof(Worker) !== "undefined") {
+         if (typeof(w) == "undefined") {
+            w = new Worker("workertask.js");
+         }
+         w.onmessage = function(e) {       
+         document.getElementById("result").innerHTML =  edata ; 
+         };
+    } else {
+         document.getElementById("result").innerHTML =
+             "이 브라우저는 Web Workers를 지원하지 않습니다..";
+    }
+  }
+
+  function stopWorker() { 
+     w.terminate(); 
+  }
+</script>
+</body> 
+</html> 
+

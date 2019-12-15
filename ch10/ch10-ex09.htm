@@ -1,0 +1,18 @@
+<canvas id="c1" width="500" height="300" style="border:1px solid gray;" /> 
+<script> 
+   var dx=5, dy=5, x=100, y=100; 
+   function moving() { 
+      var c = document.getElementById("c1"); 
+      var obj = c.getContext("2d");         
+      obj.clearRect(0, 0, 500, 300); 
+      obj.beginPath(); 
+      obj.arc(x, y, 20, 0, 1.5*Math.PI);
+      obj.fillStyle = "red"; 
+      obj.closePath();  obj.fill();     
+      if ( x<(0+20) || x>(500-20))  dx = (-1)*dx ;
+      if (y<(0+20) || y>(300-20))  dy = (-1)*dy ;
+      x += dx;  y += dy; 
+   }
+   setInterval(moving, 100); 
+
+</script>

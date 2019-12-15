@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+
+<body>
+<script> 
+  function halfWindow() { 
+    var w1=window.open('', '', 'width=200, height=150'); 
+    var width = screen.width / 2; 
+    var height = screen.height / 2; 
+    w1.top += 30; w1.left += 30; 
+    w1.resizeTo(width, height);      
+  } 
+
+  function quaterWindow() { 
+    var w1=window.open('', '', 'width=200, height=150'); 
+    var width = screen.width / 4; 
+    var height = screen.height / 4; 
+    w1.top=0; w1.left=0; 
+    w1.resizeTo(width, height);      
+  } 
+</script>  
+ <button onclick="halfWindow();"> half-window </button>
+ <button onclick="quaterWindow();"> quater-window </button>
+  
+  
+</body> 
+  
+</html> 

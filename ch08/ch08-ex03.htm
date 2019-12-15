@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<script>
+    function changeContent() {         
+       var pTag = document.getElementById("p1");
+       var txt = "이제부터는 자바스크립트를 공부합니다 !";  
+       txt = txt  + "<br><hr>" ; 
+       txt = txt + "<img src='./image/js.png'  width= 150 height=100 /><hr>";  
+       txt = txt + "<p> 즐겁게 열심히 합시다 ! </p>"; 
+       pTag.innerHTML = txt ;
+    } 
+  
+</script> 
+<body>
+
+<h2>Web Programming!</h2>
+
+<p id="p1">지금까지 HTML과 CSS를 공부했습니다.</p>
+
+<button type="button"
+   onclick='changeContent();'> Next </button>
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿CACHE MANIFEST 
+#반드시 다운로드해야 할 파일들 
+CACHE: 
+sample.css
+sample.js
+image0.jpg
+#반드시 네트워크 연결이 필요한 파일들  
+NETWORK: 
+image1.jpg
+#필요한 파일을 연결할 수 없을 때 대체해서 제공할 파일들 
+FALLBACK:
+image9.jpg  image0.jpg
+   
+
+

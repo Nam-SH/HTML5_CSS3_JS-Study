@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <script> 
+    
+     var imgs=["./image/image0.jpg", "./image/image1.jpg",  "./image/image2.jpg" ]; 
+     var imgFiles = new Array(); 
+     for (var i=0; i< imgs.length; i++) {
+        imgFiles[i] = new Image(); 
+        imgFiles[i].src= imgs[i];
+     }    
+
+     function change() { 
+        var obj=document.getElementById("img1"); 
+        i= (i+1) % imgs.length;          
+        obj.src = imgFiles[i].src;    
+     }  
+  </script>    
+</head>
+<body>
+  이미지 보기 &nbsp;&nbsp;
+  <input type="button" value="Next" onclick="change();"/> <hr> 
+  <img id="img1" src="./image/image0.jpg" width="200" height="150"/> <hr> 
+</body>
+</html> 

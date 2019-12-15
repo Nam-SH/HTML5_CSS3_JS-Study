@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  
+  <script> 
+    function visitingCount() {   
+      
+      var currentDate = new Date(); 
+ 
+      if ( localStorage !== null) {
+        if (localStorage.visitingCount)  localStorage.visitingCount++;    
+        else  localStorage.visitingCount=1;  
+        document.getElementById('info1').innerHTML =
+            localStorage.visitingCount + '번째 방문을 환영합니다 !' ;
+        if (localStorage.visitingCount == 1) {     
+          document.getElementById('info3').innerHTML =
+              '처음 방문을 환영합니다.!';            
+          document.getElementById('info2').innerHTML =
+              '직전 방문시간 : ' + currentDate.toLocaleString();  
+          localStorage.date = currentDate.toLocaleString();
+        } 
+        else {                      
+          document.getElementById('info3').innerHTML =
+              '직전 방문시간 : ' + localStorage.date.toLocaleString();  
+          document.getElementById('info2').innerHTML =
+              '오늘 방문시간 : ' + currentDate.toLocaleString();  
+          localStorage.date = currentDate.toLocaleString();
+        }      
+      } 
+    }   
+  </script> 
+  
+
+
+</head>
+<body onload="visitingCount();" >   
+  <h2 id="info1"> </h2> <hr>
+  <div id="info2"> </div> 
+  <div id="info3"> </div>   
+</body>
+</html> 
+

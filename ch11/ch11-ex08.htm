@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html> 
+
+<body>   
+  파일 선택 : <input type="file" id="file1"/> <hr> 
+  <div id="content"></div>
+      
+ <script>  
+   var fileObj = document.getElementById('file1');    
+    
+   fileObj.onchange = function () {     
+     var fileList = fileObj.files;  
+
+     // 파일 읽기  
+     var reader = new FileReader();    
+     reader.readAsText(fileList[0]); 
+
+     // 로드된 파일 처리 
+     reader.onload = function() { 
+        document.getElementById('content').textContent = reader.result;    
+
+     } 
+
+          
+   } 
+ </script> 
+
+
+
+
+</body>
+</html> 
+
