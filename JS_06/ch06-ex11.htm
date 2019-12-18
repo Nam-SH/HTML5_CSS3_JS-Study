@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+  <title>prompt() 함수</title>
+<body>
+  <script>
+    // prompt () 함수는 대화상자를 통해 사용자에게 문자열의 입력을 요구하고, 사용자가 입력한 문자열을 반환한다.
+    // 데이터를 문자열로 저장하기 때문에 parseInt(), parseFloat(), Number() 와 같은 형변환 함수들을 이용해서 수치형으로 변환해서 사용해야 한다.
+    var name = prompt("이름은 ?");
+    var kor = prompt("국어 시험성적은 ?");
+    var math = prompt("수학 시험성적은 ?");
+    var eng = prompt("영어 시험성적은 ?");
+    total = Number(kor) + Number(math) + Number(eng);
+    avg = total / 3;
+
+    document.write("<table border=1 >");
+    document.write("<tr><td>이름</td> <td>" + name + "</td></tr>");
+    document.write("<tr><td>국어</td><td>" + kor + "</td></tr>");
+    document.write("<tr><td>수학</td><td>" + math + "</td></tr>");
+    document.write("<tr><td>총점</td> <td>" + total + "</td></tr>");
+    document.write("<tr><td>평균</td> <td>" + avg + "</td</tr>");
+    document.write("</table>");
+  </script>
+
+</body>
+
+</html>

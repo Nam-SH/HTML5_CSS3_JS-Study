@@ -2,5 +2,5 @@
 var  subject2="Javascript!"; 
 
 function welcome(target) {
-  document.write("Welcome to " + target);  
+  alert("Welcome to " + target);  
 }
