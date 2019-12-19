@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<title>리스트 작성</title>
+
+<body>
+  <h3>What Can JavaScript Do?</h3>
+  여행하고 싶은 지역 : <input id="t1" type="text" />
+  <button onclick="listPlace();">추가</button>
+
+  <ul id="t2"></ul>
+  <script>
+    function listPlace() {
+
+      // getElementById: 주어진 문자열과 일치하는 id 속성을 가진 요소를 찾고, 이를 나타내는 Element 객체를 반환합니다
+      var inTag = document.getElementById('t1');
+      var listPlace = document.getElementById('t2');
+
+      // createElement: 메서드는 지정한 tagName의 HTML 요소를 만들어 반환합니다.
+      var newPlace = document.createElement('li');
+
+      // createTextNode: 텍스트 노드를 생성합니다.
+      var placeNode = document.createTextNode(inTag.value);
+
+      // appendChild: 특정 부모 노드의 자식 노드 리스트 중 마지막 자식으로 붙입니다
+      newPlace.appendChild(placeNode);
+      listPlace.appendChild(newPlace);
+      inTag.value = '';
+    }
+  </script>
+
+</body>
+
+</html>

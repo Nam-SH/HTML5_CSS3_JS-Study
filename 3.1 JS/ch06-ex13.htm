@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+  <title>switch ~ case(1)</title>
+<body>
+  <script>
+    var choice1 = prompt("당신의 선택번호는 ?");
+    choice = parseInt(choice1);
+    switch (choice) {
+      case 0:
+        document.write("HTML5 <br>");
+        // 만일 break를 하지 않은 경우, 0을 입력하게 되면 case1, case2, default 모두가 실행이 된다.
+        break;
+      case 1:
+        document.write("CSS3 <br>");
+        break;
+      case 2:
+        document.write("Javascript <br>");
+        break;
+      default:
+        document.write("Web Page <br>");
+    }
+  </script>
+</body>
+
+</html>

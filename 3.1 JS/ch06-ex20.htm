@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<title>자바스크립트 함수</title>
+
+<body>
+  <script>
+    function f1(n) {
+      // 1. 지역변수 설정
+      var result = 1;
+      var num = Number(n);
+
+      // 2. 함수의 명령코드
+      for (i = 1; i <= num; i++) result *= i;
+
+      // 3. return 반환값
+      return result;
+    }
+
+    function f2(n) {
+      var result = 1;
+      num = Number(n);
+      for (i = 1; i <= num; i++) result *= i;
+      document.write(n + "! = " + result + "<br>");
+    }
+
+    for (j = 1; j <= 20; j++) {
+      if (j / 2 * 2 == j)
+        document.write(j + "! = " + f1(j) + "<br>");
+      else f2(j);
+    }
+  </script>
+</body>
+
+</html>

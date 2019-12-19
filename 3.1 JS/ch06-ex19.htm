@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+  <title>for-in문</title>
 <body>       
   
   <script>          
@@ -7,15 +8,13 @@
       
       season["mar"]="춘곤기"; season["sep"]="환절기";         
  
-     
       document.write("(1) for문 출력: "); 
       for (i=0 ; i<season.length; i++) document.write(season[i]+" "); 
       document.write("<hr>"); 
-      document.write("(2) for-in 문 출력: "); 
+      document.write("(2) for-in문 출력: "); 
       for ( var key in season) 
             document.write(season[key]+" "); 
- 
-     
+
   </script> 
 </body>
 </html> 

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<title>getElementById, innerHTML 사용</title>
+<script>
+    function changeContent() {
+        // // getElementById: 주어진 문자열과 일치하는 id 속성을 가진 요소를 찾고, 이를 나타내는 Element 객체를 반환합니다   
+        var pTag = document.getElementById("p1");
+        var bTag = document.getElementById("b1");
+        var txt = "이제부터는 자바스크립트를 공부합니다 !";
+        txt += "<br><hr>";
+        txt += "<img src='./image/jslogo.png'  width= 150 height=100 /><hr>";
+        txt += "<p> 즐겁게 열심히 합시다 ! </p>";
+
+        // innerHTML은 요소(element) 내에 포함 된 HTML 또는 XML 마크업을 가져오거나 설정합니다.
+        pTag.innerHTML = txt;
+
+        // none: 블록이 생성되지 않는다. 이 경우 화면에서 완전히 사라져 어떠한 공간도 차지하지 않는다.
+        // bTag.style.display = "none"; 
+
+        // hidden: 보이지 않는 박스는 display 속성이 none으로 지정되지 않는 한 레이아웃에 영향을 미친다.
+        bTag.style.visibility = "hidden";
+    }
+</script>
+
+<body>
+
+    <h3>What Can JavaScript Do ?</h3>
+    <p id="p1">지금까지 HTML과 CSS를 공부했습니다.</p>
+    <button id="b1" onclick='changeContent();'> Next </button>
+</body>
+
+</html>
