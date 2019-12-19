@@ -1,33 +1,41 @@
 ﻿<!DOCTYPE html>
 <html>
+  <title>특정 노드의 직전 형제 노드 추가</title>
 
 <body>
-추천 여행지 : 
-  <input id="t1" type="text" />
-  <button onclick="listPlace1();" >국내</button>
-  <button onclick="listPlace2();" >해외</button> <hr>
-  <div id="d1"> 
-    <div>1. 국내여행지</div>    
+  추천 여행지 : <input id="t1" type="text" ref="ref_t1"/>
+  <button onclick="listPlace1();">국내</button>
+  <button onclick="listPlace2();">해외</button>
+  <hr>
+
+  <div id="d1">
+    <div>1. 국내여행지</div>
     <div id="d2">2. 해외여행지</div>
- </div>
- <script> 
-    function listPlace2() {       
-      var tag1 = document.getElementById('t1');  
-      var tag2 = document.getElementById('d1'); 
-      var newtag = document.createElement('div');            
-      var txtNode = document.createTextNode(tag1.value);     
-      newtag.appendChild(txtNode); 
-      tag2.appendChild(newtag);  inTag.value='';  
-    } 
-    function listPlace1() { 
-      var tag1 = document.getElementById('t1');       
-      var tag2 = document.getElementById('d1'); 
-      var tag3 = document.getElementById('d2'); 
-      var newtag = document.createElement('div');            
-      var txtNode = document.createTextNode(tag1.value);   
-      newtag.appendChild(txtNode); 
-      tag2.insertBefore(newtag, tag3);  inTag.value='';  
-    } 
- </script> 
+  </div>
+
+  <script>
+    function listPlace2() {
+      var tag1 = document.getElementById('t1');
+      var tag2 = document.getElementById('d1');
+      var newtag = document.createElement('div');
+      var txtNode = document.createTextNode(tag1.value);
+      newtag.appendChild(txtNode);
+      tag2.appendChild(newtag);
+      t1.value = '';
+      this.$ref.foc
+    }
+
+    function listPlace1() {
+      var tag1 = document.getElementById('t1');
+      var tag2 = document.getElementById('d1');
+      var tag3 = document.getElementById('d2');
+      var newtag = document.createElement('div');
+      var txtNode = document.createTextNode(tag1.value);
+      newtag.appendChild(txtNode);
+      tag2.insertBefore(newtag, tag3);
+      t1.value = '';
+    }
+  </script>
 </body>
-</html> 
+
+</html>

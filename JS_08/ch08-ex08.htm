@@ -1,23 +1,34 @@
 ﻿<!DOCTYPE html>
 <html>
+<title>HTML 요소의 추가와 삭제, 대체</title>
 
 <body>
-
   여행하고 싶은 지역 : <input id="t1" type="text" />
-  <button onclick="listPlace();" >추가</button>
+  <button onclick="listPlace();">추가</button>
   <ul id="t2"></ul>
-  <script> 
-    function listPlace() { 
-      var inTag = document.getElementById('t1');  
-      var listPlace = document.getElementById('t2'); 
-      var  newPlace = document.createElement('li');            
-      var  placeNode = document.createTextNode(inTag.value);   
-      newPlace.appendChild(placeNode); 
-      listPlace.appendChild(newPlace); 
-      inTag.value='';  
-    }  
+  <script>
+    // getElementById('아이디값'): id='아이디값'인 요소객체를 탐색함
+    
+    // createElement('tagName'): 새로운 요소 노드를 생성함
+    // createTextNode('textString'): 새로운 텍스트 노드를 생성함
+    // appendChild(childnode): 자식 노드(childNode)를 추가함
+    // setAttribute(attName, value): 새로운 속성과 속성값을 지정함
+    // getAttribute(name): 속성값을 참조함
+    // removeChild(child): 자식 노드(childeNode)를 제거함
+    // insertBefore(newC, node): 특정 자식 노드(node)의 직전 형제 노드로 추가함
+    // replaceChild(new, old): 요소 노드(old)를 새로운 요소 노드(new)로 대체함
+
+    function listPlace() {
+      var inTag = document.getElementById('t1');
+      var listPlace = document.getElementById('t2');
+      var newPlace = document.createElement('li');
+      var placeNode = document.createTextNode(inTag.value);
+      newPlace.appendChild(placeNode);
+      listPlace.appendChild(newPlace);
+      inTag.value = '';
+    }
   </script>
- 
 
 </body>
-</html> 
+
+</html>
