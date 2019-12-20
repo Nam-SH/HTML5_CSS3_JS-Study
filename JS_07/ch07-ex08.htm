@@ -4,26 +4,13 @@
 
 
 <script>    
-  var x = 3.14159;  y = 54321; 
-  document.write("Number 객체의 메소드<br>");
-  document.write("x=" + x + ",  y=" + y + "<hr>");
-  document.write("x.toExponential(2) : " + x.toExponential(2) + "<br>"); 
-  document.write("x.toExponential(4) : " + x.toExponential(4) + "<br>"); 
-  document.write("x.toExponential(6) : " + x.toExponential(6) + "<hr>"); 
- 
-  document.write("x.valueOf() : " + x.valueOf() + "<br>");  
-  document.write("(98).valueOf() : " + (98).valueOf() + "<br>");       
-  document.write("(x+23).valueOf() : " + (x+23).valueOf() + "<hr>");  
+  
+x.toExponential(n)    // 수치를 소수점 이하 n 지수 표현 문자열로 변환함
+x.valueOf()   // Integer 객체를 반환한다
+x.toFixed(n)    // 소수점 이하 n의 고정소수
+x.toPrecision(n)   // n의 유효자리 수치로 변환함
+x.toSpring(n)   // n진 수치 문자열로 변환함
 
-  document.write("x.toFixed(0) : " + x.toFixed(0) + "<br>");  
-  document.write("x.toFixed(1) : " + x.toFixed(1) + "<br>");  
-  document.write("x.toFixed(3) : " + x.toFixed(3) + "<br>");  
-  document.write("x.toFixed(6) : " + x.toFixed(6) + "<hr>");  
-
-  document.write("x.toPrecision() : " +  x.toPrecision() + "<br>");  
-  document.write("x.toPrecision(1) : " + x.toPrecision(1) + "<br>"); 
-  document.write("x.toPrecision(3) : " + x.toPrecision(3) + "<br>"); 
-  document.write("x.toPrecision(6) : " + x.toPrecision(6)); 
 </script>
 
 </body>
