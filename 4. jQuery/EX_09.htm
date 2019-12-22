@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <title> css() 작업함수 사용 </title>
+  <script src='https://code.jquery.com/jquery-3.1.1.js'></script>
+</head>
+
+<body>
+  <h3> Web Programming ! </h3>
+  <hr>
+  <p class="a"> HTML5 </p>
+  <p class="a"> CSS3 </p>
+  <p class="a"> 자바스크립트 </p>
+
+  <script>
+    $(document).ready(function () {
+      $('p').css('backgroundColor', 'orange');
+      $('p').css('height', '30');
+      $('p').css('width', function (i) {
+        var value = 50;
+        i++;
+        value += 60 * i;
+        return value;
+      });
+    });
+  </script>
+</body>
+
+</html>

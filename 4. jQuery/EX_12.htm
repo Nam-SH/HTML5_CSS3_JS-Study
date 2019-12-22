@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <title>jQuery를 이용한 리스트 추가 재작성</title>
+  <script src='https://code.jquery.com/jquery-3.1.1.js'></script>
+</head>
+
+
+<body>
+
+  여행하고 싶은 지역 : <input id="t1" type="text" />
+  <button id="b1">추가</button>
+  <ul id="t2"></ul>
+
+  <script>
+    $(document).ready(function () {
+      $('#b1').click(function () {
+        var str1 = $('#t1').val();
+        $('#t2').append($('<li></li>').html(str1));
+        $('#t2').append($('<li></li>').html(`<h1>${str1}</h1>`));
+        $('#t1').val('')
+      });
+    });
+  </script>
+</body>
+</html>

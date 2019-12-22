@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+  <title>jQuery로 리스트 추가</title>
+
+<head>
+
+  <script src='https://code.jquery.com/jquery-3.1.1.js'></script>
+</head>   
+
+<body>
+  <p><img src="./image/w3.png" width="50" height="50" /> Web Programming ! </p>
+  <hr>
+  <div id="d1"> HTML5 </div>
+  <div id="d2"> CSS3 </div>
+  <div id="d3"> 자바스크립트 </div>
+
+  <form>
+    <input type="text" id="cont" value="" />
+    <input type="button" id="b1" value="교과내용 추가" /> <br>
+  </form>
+
+  <script>
+    $(document).ready(function () {
+      $('#b1').click(function () {
+        var str1 = $('#cont').val();
+        if (str1.length < 1) {
+          alert('값이 입력이 안 되었는데여?');
+          return
+        }
+        $('<div></div>').html(str1).css('color', 'red').appendTo('#d3');
+        $('#cont').val('')
+      });
+    });
+  </script>
+</body>
+
+</html>

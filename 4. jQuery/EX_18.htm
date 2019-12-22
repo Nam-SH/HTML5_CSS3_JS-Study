@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>slideUp / slideDown / slideToggle 사용</title>
+ <style> 
+  #panel, #flip { padding: 5px; text-align: center;
+    background-color: lightgray;
+    border: solid 1px gray;
+  }
+ </style>
+ <script src='https://code.jquery.com/jquery-3.1.1.js'></script>    
+ <script> 
+   $(document).ready(function(){
+     $('#panel').css('display', 'none'); 
+     $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+     });
+   });
+</script>
+<div id="flip">여기를 클릭하면 내용이 내려오고/올라 갑니다. </div>
+<div id="panel">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+</div>
+</body>
+</html> 

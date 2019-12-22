@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+   <title>jQuery로 전구 on/off 재작성</title>
+
+<head>
+   <style>
+      #switch {
+         background: lightyellow;
+      }
+   </style>
+   <script src='https://code.jquery.com/jquery-3.3.1.js'></script>
+</head>
+
+<body>
+
+   <h3>전구 스위치 On/Off</h3>
+   <img id="light" src="./image/lightoff.png" style="width:70px">
+   <button id="switch">On</button>
+
+   <script>
+      $(document).ready(function () {
+         $('#switch').click(function () {
+            if ($('#switch').html() == 'On') {
+               $('#switch').html('Off');
+               $('#switch').css('backgroundColor', 'lightgray');
+               $('#light').attr('src', './image/lighton.png');
+            } else {
+               $('#switch').html('On');
+               $('#switch').css('backgroundColor', 'lightyellow');
+               $('#light').attr('src', './image/lightoff.png');
+            }
+         });
+      });
+   </script>
+
+</body>
+
+</html>

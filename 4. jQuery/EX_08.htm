@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <title> toggleClass 예제 </title>
+  <script src='https://code.jquery.com/jquery-3.1.1.js'></script>
+</head>
+
+<body>
+  <h3> Web Programming ! </h3>
+  <hr>
+  <p> HTML5 </p>
+  <p> CSS3 </p>
+  <p> 자바스크립트 </p>
+
+  <style>
+    .current {
+      background-color: orange;
+    }
+    p {
+      background-Color: gray;
+      height: 30px;
+      width: 150px;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+
+      // 1. p태그에 마우스입력이벤트가 발생하면
+      $('p').mouseenter(function () {
+
+        // 2. 클래스인 current의 요소가 추가, 삭제를 교대로 반복함
+        $(this).toggleClass('current');
+      });
+    });
+  </script>
+</body>
+
+</html>
