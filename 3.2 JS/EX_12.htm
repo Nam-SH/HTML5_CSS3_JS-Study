@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+  <title>a 요소의 디폴트 이벤트 처리</title>
+
+<head>
+  <script>
+    // 이벤츠 객체의 주요속성과 메서드
+    // type: 이벤트 종류(문자열)
+    // target: 해당 이벤트를 발생시킨 객체
+    // defaultPrevented: 해당 이벤트의 디폴트 처리의 중지 여부 표시(true, false)
+    // preventDefault(): 해당 이벤트의 디폴트 처리를 중지함
+
+    window.onload = function () {
+      document.getElementById("a1").onclick = f;
+      document.getElementById("a2").addEventListener("click", f);
+      document.getElementById("a3").onclick = f2;
+    }
+
+    function f(e) {
+      e.preventDefault();
+    }
+
+    function f2(e) {
+      var result = confirm("정보검색 사이트로 연결할까요 ?");
+      if (result == false) e.preventDefault();
+    }
+  </script>
+</head>
+
+<body>
+  <a href="http://www.google.co.kr" target="_blank"> 하이퍼링크-1 </a><br>
+  <a href="http://www.google.co.kr" target="_blank" onclick=" return false; "> 하이퍼링크-2 </a><br>
+  <a href="http://www.google.co.kr" target="_blank" onclick=" f(event); "> 하이퍼링크-3 </a><br>
+  <a href="http://www.google.co.kr" target="_blank" id="a1"> 하이퍼링크-4 </a><br>
+  <a href="http://www.google.co.kr" target="_blank" id="a2"> 하이퍼링크-5 </a><br>
+  <a href="http://www.google.co.kr" target="_blank" id="a3"> 하이퍼링크-6 </a>
+</body>
+
+</html>

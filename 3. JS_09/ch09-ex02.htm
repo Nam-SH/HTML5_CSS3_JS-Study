@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <title> jQuery 사용 예 </title>
+  <script src='https://code.jquery.com/jquery-3.1.1.js'></script>
+</head>
+
+<body>
+  <h3 id="t1" style="color: black;"> 자바스크립트 프로그래밍 </h3>
+  <hr>
+  <button id="b1">내용변경</button> <!--  ① -->
+  <button id="b2">스타일변경</button> <!-- ② -->
+
+  <script>
+    // ready(): jQuery함수로, HTML문서가 완전히 로드되었을 경우 function()을 실행하라는 의미이다.
+    $(document).ready(function () {
+      $('#b1').on('click', function () {
+        // console.log($('#t1').html() === 'jQuery 프로그래밍')
+        if ($('#t1').html() === 'jQuery 프로그래밍') $('#t1').html('자바스크립트 프로그래밍');
+        else $('#t1').html('jQuery 프로그래밍');
+      });
+      $('#b2').on('click', function () {
+        // console.log($('#t1').css('color') === 'rgb(0, 0, 0)')
+        if ($('#t1').css('color') === 'rgb(0, 0, 0)') $('#t1').css('color', 'red');
+        else $('#t1').css('color', 'black');
+      });
+    });
+  </script>
+</body>
+
+</html>

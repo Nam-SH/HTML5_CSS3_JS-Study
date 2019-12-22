@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+  <title>load / unload 이벤트 처리</title>
+
+<img id="fig1" src="./image/image1.jpg" width="200" height="150" onclick="f();" /> <br>
+<p id="demo"></p>
+<img id="fig2" />
+
+<!-- <script>
+  function f() {
+    var obj = document.getElementById("fig2");
+    obj.src = "./image/image2.jpg"; // 이미지 파일 로드 요청 및 백그라운드 로딩 작업시작
+
+    // 1. 이미지 파일의 변경을 요청한 직후 곧바로 이지미 크기를 출력하면 이미지 정보를 얻지 못한다.
+    document.getElementById("demo").innerHTML = '이미지파일 크기:' + obj.width + 'x' + obj.height;
+  }
+</script> -->
+
+<script>
+  function f() {
+    var obj = document.getElementById("fig2");
+    obj.src = "./image/image2.jpg";
+    // 2. 이미지 파일의 로드가 끝난 이후 발생하는 load 이벤트를 처리한다.
+    obj.onload = function () {
+      document.getElementById("demo").innerHTML = '이미지파일 크기: ' + obj.width + 'x' + obj.height
+    }
+  }
+</script>
+
+</html>

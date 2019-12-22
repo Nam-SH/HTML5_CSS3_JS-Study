@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <title>컬렉션 객체의 사용</title>
+<body>
+  <form>
+    학 과 : <input type="text" name="dept" required /> &nbsp;&nbsp;&nbsp;
+    이 름 : <input type="text" name="sName" required />
+    <hr>
+    <div>Q1. HTML5 프로그래밍에서 다루는 내용이 아닌 것은 ? <br>
+      <input type="radio" name="q1" value="1"> HTML </input> <br>
+      <input type="radio" name="q1" value="2"> CSS3 </input> <br>
+      <input type="radio" name="q1" value="3"> JavaScript </input> <br>
+      <input type="radio" name="q1" value="4"> PHP </input>
+    </div>
+    <br><br>
+    <div>Q2. 다음 중 그 성격이 다른 프로그램은 ? <br>
+      <input type="radio" name="q2" value="1"> 사파리 </input> <br>
+      <input type="radio" name="q2" value="2"> 파워포인트 </input> <br>
+      <input type="radio" name="q2" value="3"> 파이어폭스 </input> <br>
+      <input type="radio" name="q2" value="4"> 크롬 </input>
+    </div>
+    <hr>
+  </form>
+
+  <button onclick="computeScore();"> 채점 </button>
+  <span id="result"> </span>
+
+  <script>
+    function computeScore() {
+      var choice = new Array(); // 학생 응답
+      var answer = [4, 2]; // 정답
+      var major = document.getElementsByName('dept')[0].name;
+      var { name } = document.getElementsByName('sName')[0];
+      var noti = document.getElementById('result');
+      var score = 0;
+      
+      console.log(document.forms)
+
+      choice.push(document.forms.q1.value)
+      choice.push(document.forms.q2.value)
+
+      console.log(document.querySelectorAll('div'))
+      
+
+      for (i = 0; i < 2; i++) {
+        if (parseInt(choice[i]) == parseInt(answer[i]))
+          score = score + 10;
+      }
+      noti.innerHTML = name + "의 점수는 : " + score + "점";
+    }
+  </script>
+
+</body>
+
+</html>
