@@ -14,14 +14,14 @@
   </div><hr>  <button onclick="setInterval(movingImages, 100);">Start</button>  
  
   <script>   
+
     function movingImages(){
       var  parent = document.getElementById('p1');   
       var  imgTags = document.querySelectorAll('img');  
       var  movingImage = imgTags[0]; 
       movingImage.parentNode.removeChild(movingImage);     
       parent.appendChild(movingImage);             
-    }      
-     
-  </script> 
+    }
+  </script>
 </body>
 </html> 

@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
-  <title>진행 바 구현</title>
+<title>진행 바 구현</title>
 <style>
   #rangeProgress {
     width: 100%;
@@ -8,6 +8,7 @@
     position: relative;
     background-color: darkgray;
   }
+
   #bar {
     background-color: blue;
     width: 0px;
@@ -28,26 +29,31 @@
 
   <script>
     function move() {
-
       // 1. 주어진 문자열과 일치하는 id 속성을 가진 요소를 찾고, 이를 나타내는 Element 객체를 반환한다.
       var progressBar = document.getElementById("bar");
-      var demo1 = document.getElementById("demo");
+      var demoTxt = document.getElementById("demo");
       var width = 0;
 
       // 2. setInterval(function, ms) 함수 설정
       var gauge = setInterval(function frame() {
+
         // 3. 방금 정의한 width 값이 100이면 종결
-        if (width == 100) clearInterval(gauge);
-        else {
+        if (width == 100) {
+          clearInterval(gauge);
+          alert('끝');
+        } else {
+
           // 4. progressBar 스타일의 width 값을 1씩 증가시킨다
           width++;
           progressBar.style.width = width + '%';
-          // 5. demo1의 0%라고 적혀있는 것을 innerHTML로 변경시킨다.
-          demo1.innerHTML = width + '%';
+
+          // 5. demo1의 0%라고 적혀있는 것을 innerHTML를 사용해서 변경시킨다.
+          demoTxt.innerHTML = width + '%';
         }
-      }, 500);
+      }, 100);
     }
   </script>
+
 </body>
 
 </html>

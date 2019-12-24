@@ -12,6 +12,13 @@
 </style>
 
 <head>
+
+</head>
+
+<body>
+  <h2>디지털 시계</h2>
+  <h1 id="t1"></h1>
+
   <script>
     // 1. 애니메이션 효과 속성값의 변경 시간 간격(밀리초) 지정
     var inter = 0;
@@ -19,6 +26,8 @@
     function changeObj() {
       // 3. 애니메이션 효과를 나타낼 요소객체 접근
       var obj = document.getElementById('t1');
+
+      // new: 새로운 object 요소 생성
       var d = new Date();
       var h = d.getHours();
       var m = d.getMinutes();
@@ -35,11 +44,6 @@
     }
     setInterval(changeObj, inter);
   </script>
-</head>
-
-<body>
-  <h2>디지털 시계</h2>
-  <h1 id="t1"></h1>
 </body>
 
 </html>
