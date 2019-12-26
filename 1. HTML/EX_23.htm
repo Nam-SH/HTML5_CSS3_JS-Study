@@ -1,0 +1,29 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title> getElementById 사용 예제 </title>
+
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend> placeholder 속성의 사용 예 </legend>
+      주전공 : <input type="text" placeholder="컴퓨터공학" id="first" /> <br>
+      부전공 : <input type="text" value="수학" id="second" /> <br>
+    </fieldset> <br>
+    <input type="submit" onclick="f();" value="저장하기" /> <input type="reset" value="입력 취소" />
+  </form>
+
+  <script>
+    function f() {
+      var txt1 = document.getElementById("first").value;
+      var txt2 = document.getElementById("second").value;
+      var txt = "주전공: " + txt1 + ", 부전공 : " + txt2;
+      alert(txt);
+    }
+  </script>
+</body>
+
+</html>
