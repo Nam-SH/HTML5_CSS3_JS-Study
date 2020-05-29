@@ -1,45 +1,47 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
- 
-  <script> 
-    function clickPoint() {    
+
+  <script>
+    function clickPoint() {
       if (sessionStorage !== null) {
         if (sessionStorage.points) {
-          sessionStorage.points ++;
+          sessionStorage.points++;
         } else {
-          sessionStorage.points =  1 ;
+          sessionStorage.points = 1;
         }
-         document.getElementById('totalPoint').value = sessionStorage.points ;
+        document.getElementById('totalPoint').value = sessionStorage.points;
       } else {
-         document.getElementById('totalPoint').value = "포인트 적립 불가";
+        document.getElementById('totalPoint').value = "포인트 적립 불가";
       }
     }
 
-    function showPoint() { 
-      document.getElementById('totalPoint').value = sessionStorage.points ;
+    function showPoint() {
+      document.getElementById('totalPoint').value = sessionStorage.points;
     }
 
-    function clearPoint() { 
-      sessionStorage.removeItem('points'); 
-      document.getElementById('totalPoint').value = sessionStorage.points ;
-    } 
-    
- </script> 
-  
+    function clearPoint() {
+      sessionStorage.removeItem('points');
+      document.getElementById('totalPoint').value = sessionStorage.points;
+    }
+  </script>
+
 
 
 </head>
-<body onload="showPoint();" >   
-<p> 누적 세션포인트  : <input type="text" id="totalPoint"  size="6" disabled />
-    <button onclick="clickPoint();" type="button">+</button>   
+
+<body onload="showPoint();">
+  <p> 누적 세션포인트 : <input type="text" id="totalPoint" size="6" disabled />
+    <button onclick="clickPoint();" type="button">+</button>
     <button onclick="clearPoint();" type="button">reset</button>
-</p> <hr> 
-<p> "+" 을 클릭하면, 세션포인트가 추가됨</p>
+  </p>
+  <hr>
+  <p> "+" 을 클릭하면, 세션포인트가 추가됨</p>
 
 
 
 
 </body>
-</html> 
 
+</html>

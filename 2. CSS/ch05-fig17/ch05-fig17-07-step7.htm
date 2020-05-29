@@ -1,72 +1,130 @@
 ﻿<!DOCTYPE HTML>
 <html>
-<head>
-  <title>Layout Step 7</title>  
 
-  <style> 
-     *  { box-sizing: border-box; }
-    #header  { background: dimgray; color: white; } 
-    #menu  {  background: black; color: white; } 
-    #content  { background: ghostwhite; } 
-    #side { background: Gainsboro; } 
-    #footer  { background: darkgray; }   
+<head>
+  <title>Layout Step 7</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    #header {
+      background: dimgray;
+      color: white;
+    }
+
+    #menu {
+      background: black;
+      color: white;
+    }
+
+    #content {
+      background: ghostwhite;
+    }
+
+    #side {
+      background: Gainsboro;
+    }
+
+    #footer {
+      background: darkgray;
+    }
 
     /* step-2 */
-    #menu  { float: left;  width: 20%; } 
-    #content  { float: left;  width: 60%; } 
-    
+    #menu {
+      float: left;
+      width: 20%;
+    }
+
+    #content {
+      float: left;
+      width: 60%;
+    }
+
     /* step-3 */
-    #menu a  { display: block;  color: white; } 
+    #menu a {
+      display: block;
+      color: white;
+    }
 
     /* step-4 */
-    #footer { clear : both; }    
+    #footer {
+      clear: both;
+    }
 
     /* step 6 */
-    #container  { height: 400px; } 
-    #header  { height: 15%; } 
-    #menu, #content, #side { height: 75% } 
-    #footer  { height: 10%; } 
+    #container {
+      height: 400px;
+    }
 
-    /* step 7 */ 
-    iframe { margin: 0px 0px; padding: 0px 0px; border: 0px;  
-             width: 100%; height : 100% ; } 
-    #header, #menu, #side, #footer  { text-align: Center; }   
+    #header {
+      height: 15%;
+    }
 
-     /* step 8 */
-     #menu { z-index: 1;  background: #111;  overflow-x: hidden; } 
-     #menu a { color: white;  padding: 16px;  text-decoration: none; }
-     #menu a:hover  { background-color: lightgray;  color: black; } 
+    #menu,
+    #content,
+    #side {
+      height: 75%
+    }
 
+    #footer {
+      height: 10%;
+    }
 
-  </style> 
+    /* step 7 */
+    iframe {
+      margin: 0px 0px;
+      padding: 0px 0px;
+      border: 0px;
+      width: 100%;
+      height: 100%;
+    }
+
+    #header,
+    #menu,
+    #side,
+    #footer {
+      text-align: Center;
+    }
+
+    /* step 8 */
+    #menu {
+      z-index: 1;
+      background: #111;
+      overflow-x: hidden;
+    }
+
+    #menu a {
+      color: white;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    #menu a:hover {
+      background-color: lightgray;
+      color: black;
+    }
+  </style>
 
 </head>
 
-<body>   
-<div id="container" >  
- <div id="header"> header </div>
-  <div id="menu"> 
-    <a href="#"> menu 1 </a>
-    <a href="#"> menu 2 </a>
-    <a href="#"> menu 3 </a>
-    <a href="#"> menu 4 </a>
-    <a href="#"> menu 5 </a>
-  </div>     
-  <div id="content">
+<body>
+  <div id="container">
+    <div id="header"> header </div>
+    <div id="menu">
+      <a href="#"> menu 1 </a>
+      <a href="#"> menu 2 </a>
+      <a href="#"> menu 3 </a>
+      <a href="#"> menu 4 </a>
+      <a href="#"> menu 5 </a>
+    </div>
+    <div id="content">
       <iframe src="sample.htm" name="maincontent" seamless></iframe>
-  </div>  
-  <div id="side"> side </div>  
-  <div id="footer"> footer </div>
-</div>
+    </div>
+    <div id="side"> side </div>
+    <div id="footer"> footer </div>
+  </div>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
- 

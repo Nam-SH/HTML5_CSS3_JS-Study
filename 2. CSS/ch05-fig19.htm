@@ -1,126 +1,211 @@
 ﻿<!DOCTYPE HTML>
 <html>
+
 <head>
-  <title> New Document </title>  
+   <title> New Document </title>
 
-  <style> 
-    *  { box-sizing: border-box; }
-    #header  { background: dimgray; color: white; } 
-    #menu  {  background: #333; color: white; } 
-    #content  { background: ghostwhite; } 
-    #side-left, #side-right  { background: Gainsboro; } 
-    #footer  { background: darkgray; }  
+   <style>
+      * {
+         box-sizing: border-box;
+      }
 
-     /* step-2 */
-    
-     #content  { float: left;  width: 80%; } 
+      #header {
+         background: dimgray;
+         color: white;
+      }
 
-     /* step-3 */
-     #menu  a { color: white;} 
+      #menu {
+         background: #333;
+         color: white;
+      }
 
-     /* step-4 */
-     #footer { clear : both; }  
+      #content {
+         background: ghostwhite;
+      }
 
-     /*  step 5  */ 
-     #container  { height: 380px; } 
-     #header  { height: 15%} 
-     #menu  { height: 10% }  
-     #side-left, #content, #side-right { height: 65% }     
-     #footer  { height: 10% } 
-   
-     /* step-7 */ 
-     iframe  { margin: 0px 0px;  padding: 0px 0px;  border: 0px;  
-                float: right;  width: 100%;  height: 100% ; }  
-     #header, #side-left, #side-right, #footer  { text-align: Center; }  
+      #side-left,
+      #side-right {
+         background: Gainsboro;
+      }
+
+      #footer {
+         background: darkgray;
+      }
+
+      /* step-2 */
+
+      #content {
+         float: left;
+         width: 80%;
+      }
+
+      /* step-3 */
+      #menu a {
+         color: white;
+      }
+
+      /* step-4 */
+      #footer {
+         clear: both;
+      }
+
+      /*  step 5  */
+      #container {
+         height: 380px;
+      }
+
+      #header {
+         height: 15%
+      }
+
+      #menu {
+         height: 10%
+      }
+
+      #side-left,
+      #content,
+      #side-right {
+         height: 65%
+      }
+
+      #footer {
+         height: 10%
+      }
+
+      /* step-7 */
+      iframe {
+         margin: 0px 0px;
+         padding: 0px 0px;
+         border: 0px;
+         float: right;
+         width: 100%;
+         height: 100%;
+      }
+
+      #header,
+      #side-left,
+      #side-right,
+      #footer {
+         text-align: Center;
+      }
 
 
-     /* 드롭다운 서브메뉴 */  
-     #menu  { padding: 6px; } 
-     ul  { background: lightgray;  padding: 6px;  margin: 0; } 
-     li  { display: inline;  padding: 10px 20px; }
-     li a  { color: black;  text-decoration: none;  padding: 5px 10px; }  
-     li a:hover  { background: darkgray;  color: black; }
-     li.dropdown  { display: inline-block; }
-     .submenu  { display: none;  position: absolute;
-          background-color: gray; 
-          box-shadow: 0px 8px 16px 0px  rgba(0,0,0,0.8); }
+      /* 드롭다운 서브메뉴 */
+      #menu {
+         padding: 6px;
+      }
 
-     .submenu a  { display: block;  color: black;  padding: 12px 16px;
-          text-decoration: none; text-align: left; }
+      ul {
+         background: lightgray;
+         padding: 6px;
+         margin: 0;
+      }
 
-     .submenu a:hover  { background: lavender;  color: black;  } 
-     .dropdown:hover .submenu  { display: block;  color: black;  }
+      li {
+         display: inline;
+         padding: 10px 20px;
+      }
 
+      li a {
+         color: black;
+         text-decoration: none;
+         padding: 5px 10px;
+      }
 
- </style> 
+      li a:hover {
+         background: darkgray;
+         color: black;
+      }
+
+      li.dropdown {
+         display: inline-block;
+      }
+
+      .submenu {
+         display: none;
+         position: absolute;
+         background-color: gray;
+         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.8);
+      }
+
+      .submenu a {
+         display: block;
+         color: black;
+         padding: 12px 16px;
+         text-decoration: none;
+         text-align: left;
+      }
+
+      .submenu a:hover {
+         background: lavender;
+         color: black;
+      }
+
+      .dropdown:hover .submenu {
+         display: block;
+         color: black;
+      }
+   </style>
 
 </head>
 
-<body>    
+<body>
 
- <div id="container"> 
-  <div id="header"> 웹 페이지 타이틀 </div>
+   <div id="container">
+      <div id="header"> 웹 페이지 타이틀 </div>
 
-  <ul id="menu"> 
-     <li class="dropdown">
-        <a href="#home" class="mainmenu">Home</a>
-        <div class="submenu">
-           <a href="#">menu 01</a> <a href="#">menu 02</a>
-        </div>
-     </li>
-  
-     <li class="dropdown">
-        <a href="#home" class="mainmenu">Menu 1</a>
-        <div class="submenu">
-           <a href="#">menu 11</a>
-           <a href="#">menu 12</a>
-        </div>
-     </li>
+      <ul id="menu">
+         <li class="dropdown">
+            <a href="#home" class="mainmenu">Home</a>
+            <div class="submenu">
+               <a href="#">menu 01</a> <a href="#">menu 02</a>
+            </div>
+         </li>
 
-     <li class="dropdown">
-        <a href="" class="mainmenu">Menu 2</a>
-        <div class="submenu">
-            <a href="#">menu 21</a> 
-            <a href="#">menu 22</a> 
-            <a href="#">menu 23</a>
-        </div>
-     </li>
+         <li class="dropdown">
+            <a href="#home" class="mainmenu">Menu 1</a>
+            <div class="submenu">
+               <a href="#">menu 11</a>
+               <a href="#">menu 12</a>
+            </div>
+         </li>
 
-     <li class="dropdown">
-        <a href="#home" class="mainmenu">Menu 3</a>
-        <div class="submenu">   
-            <a href="#">menu 31</a>   
-            <a href="#">menu 32</a>   
-            <a href="#">menu 33</a>   
-        </div>
-     </li>
-  </ul>  
+         <li class="dropdown">
+            <a href="" class="mainmenu">Menu 2</a>
+            <div class="submenu">
+               <a href="#">menu 21</a>
+               <a href="#">menu 22</a>
+               <a href="#">menu 23</a>
+            </div>
+         </li>
+
+         <li class="dropdown">
+            <a href="#home" class="mainmenu">Menu 3</a>
+            <div class="submenu">
+               <a href="#">menu 31</a>
+               <a href="#">menu 32</a>
+               <a href="#">menu 33</a>
+            </div>
+         </li>
+      </ul>
 
 
-   
-  <div id="content">
-     <iframe  src="sample.htm" name="f1" seamless></iframe>
-  </div>  
-  <div id="side-right"> 참고내용
-     <ul>         
-        <li> 참고내용 1 </li> 
-        <li> 참고내용 2 </li>
-        <li> 참고내용 3 </li> 
-        <li> 참고내용 4 </li>
-     </ul>  </div>  
-  <div id="footer"> 연락처 : 000-0000-0000, &nbsp;&nbsp; &copyright; &nbsp;웹-페이지 개발자  </div>
-</div>
- 
+
+      <div id="content">
+         <iframe src="sample.htm" name="f1" seamless></iframe>
+      </div>
+      <div id="side-right"> 참고내용
+         <ul>
+            <li> 참고내용 1 </li>
+            <li> 참고내용 2 </li>
+            <li> 참고내용 3 </li>
+            <li> 참고내용 4 </li>
+         </ul>
+      </div>
+      <div id="footer"> 연락처 : 000-0000-0000, &nbsp;&nbsp; &copyright; &nbsp;웹-페이지 개발자 </div>
+   </div>
+
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
- 

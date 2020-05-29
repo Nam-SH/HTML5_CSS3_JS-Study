@@ -1,32 +1,35 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
 
-  
+
 </head>
-<body>   
-  파일 선택 : <input type="file" id="file1" accept="image/*" /> <hr> 
-  <img id="img1" src"" width="200" height="150" />      
- <script>  
-   var fileObj = document.getElementById('file1');    
-    
-   fileObj.onchange = function () {     
-     var fileList = fileObj.files;  
 
-     // 파일 읽기  
-     var reader1 = new FileReader();    
-     reader1.readAsDataURL(fileList[0]); 
+<body>
+  파일 선택 : <input type="file" id="file1" accept="image/*" />
+  <hr>
+  <img id="img1" src"" width="200" height="150" />
+  <script>
+    var fileObj = document.getElementById('file1');
 
-     // 로드된 파일 처리 
-     reader1.onload = function() { 
-        document.getElementById('img1').src = reader1.result;  
-     }           
-   } 
- </script> 
+    fileObj.onchange = function () {
+      var fileList = fileObj.files;
+
+      // 파일 읽기  
+      var reader1 = new FileReader();
+      reader1.readAsDataURL(fileList[0]);
+
+      // 로드된 파일 처리 
+      reader1.onload = function () {
+        document.getElementById('img1').src = reader1.result;
+      }
+    }
+  </script>
 
 
 
 
 </body>
-</html> 
 
+</html>

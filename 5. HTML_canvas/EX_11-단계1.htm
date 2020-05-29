@@ -1,37 +1,31 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>  
-<script src='https://code.jquery.com/jquery-3.1.1.js'></script>    
+
+<head>
+  <script src='https://code.jquery.com/jquery-3.1.1.js'></script>
 </head>
-<body>   
-<canvas id="c1" width="300" height="300" >
-</canvas>
-<script>
-   var c = document.getElementById("c1"); 
-   var obj = c.getContext("2d"); 
-   obj.translate(150, 150);
 
-  
-   clock();  
+<body>
+  <canvas id="c1" width="300" height="300">
+  </canvas>
+  <script>
+    var c = document.getElementById("c1");
+    var obj = c.getContext("2d");
+    obj.translate(150, 150);
 
 
-   function clock() {     
-     obj.beginPath();     
-     obj.rect(-120, -120, 240, 240);    
-     obj.lineWidth = 15;
-     obj.strokeStyle = 'peru'; 
-     obj.stroke();   
-   }
-   
-   
- 
- 
-
- 
+    clock();
 
 
-</script>
+    function clock() {
+      obj.beginPath();
+      obj.rect(-120, -120, 240, 240);
+      obj.lineWidth = 15;
+      obj.strokeStyle = 'peru';
+      obj.stroke();
+    }
+  </script>
 
 </body>
-</html> 
 
+</html>

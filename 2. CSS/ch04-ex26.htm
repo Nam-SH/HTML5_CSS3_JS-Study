@@ -1,34 +1,74 @@
 ﻿<!DOCTYPE html>
 <html>
 
-    <head>    
+<head>
 
-    <style>
+  <style>
+    table {
+      table-layout: fixed;
+      width: 80%;
+      border-collapse: separate;
+      /* 생략해도 같음 */
+      border-spacing: 5px;
+      border: 2px solid blue;
+      empty-cells: hide;
+      caption-side: bottom;
+    }
 
-      table { table-layout: fixed; width: 80%;     
-              border-collapse: separate ; /* 생략해도 같음 */                        
-              border-spacing: 5px ;                 
-              border: 2px solid blue;  
-              empty-cells: hide;
-              caption-side : bottom;} 
-      td { border: 1px dotted red; } 
-      tr:first-child  { background : gray } 
+    td {
+      border: 1px dotted red;
+    }
 
-    </style>
+    tr:first-child {
+      background: gray
+    }
+  </style>
 
-  </head>
+</head>
 
-  <body>
-    
-    <table border="1">
-      <caption>  수업시간표 </caption>
-        <tr> <th>시간/요일</th> <th> 월 </th>             <th> 화 </th>                 <th> 수 </th>          <th> 목 </th> </tr>   
-      <tr> <td>1</td> <td> </td>               <td> </td>                    <td> </td>          <td rowspan=3>CSS</td> </tr>   
-      <tr> <td>2</td> <td rowspan=2>HTML5</td> <td> </td>                    <td> </td>                                 </tr> 
-      <tr> <td>3</td>                          <td> </td>                    <td> </td>                                 </tr> 
-      <tr> <td>4</td> <td> </td>               <td colspan=2>JavaScript</td>                     <td> </td>             </tr> 
-      <tr> <td>5</td> <td> </td>               <td> </td>                    <td> </td>          <td> </td>             </tr> 
-    </table>
-  </body>
+<body>
+
+  <table border="1">
+    <caption> 수업시간표 </caption>
+    <tr>
+      <th>시간/요일</th>
+      <th> 월 </th>
+      <th> 화 </th>
+      <th> 수 </th>
+      <th> 목 </th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td rowspan=3>CSS</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td rowspan=2>HTML5</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td> </td>
+      <td colspan=2>JavaScript</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </table>
+</body>
 
 </html>

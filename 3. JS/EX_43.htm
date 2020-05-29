@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <title>checkbox 합산</title>
+
 <body>
    <h3> 수강신청 과목을 모두 선택하세요 </h3>
    <hr>
@@ -13,6 +14,7 @@
    총 수강신청 학점 : <input type="text" id="sum" value="" />
    <script>
       var total = 0;
+
       function apply(subject) {
          if (subject.checked == true) {
             total += parseInt(subject.value);

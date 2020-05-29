@@ -1,46 +1,48 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-  
-  <script> 
-    function clickPoint() {    
-      if ( localStorage !== null) {
+
+  <script>
+    function clickPoint() {
+      if (localStorage !== null) {
         if (localStorage.points) {
-          localStorage.points ++;
+          localStorage.points++;
         } else {
-          localStorage.points =  1 ;
+          localStorage.points = 1;
         }
-         document.getElementById('totalPoint').value = localStorage.points ;
+        document.getElementById('totalPoint').value = localStorage.points;
       } else {
-         document.getElementById('totalPoint').value =
-            "포인트 적립 불가(로컬스토리지 지원되지 않음)";
+        document.getElementById('totalPoint').value =
+          "포인트 적립 불가(로컬스토리지 지원되지 않음)";
       }
     }
 
-    function showPoint() { 
-      document.getElementById('totalPoint').value = localStorage.points ;
+    function showPoint() {
+      document.getElementById('totalPoint').value = localStorage.points;
     }
 
-    function clearPoint() { 
-      localStorage.removeItem('points'); 
-      document.getElementById('totalPoint').value = localStorage.points ;
-    } 
-    
- </script> 
-  
+    function clearPoint() {
+      localStorage.removeItem('points');
+      document.getElementById('totalPoint').value = localStorage.points;
+    }
+  </script>
+
 
 
 </head>
-<body onload="showPoint();" >   
-<p> 누적 로컬포인트 : <input type="text" id="totalPoint"  size="6" disabled />
-    <button onclick="clickPoint();" type="button">+</button>   
+
+<body onload="showPoint();">
+  <p> 누적 로컬포인트 : <input type="text" id="totalPoint" size="6" disabled />
+    <button onclick="clickPoint();" type="button">+</button>
     <button onclick="clearPoint();" type="button">reset</button>
-</p> <hr> 
-<p> "+" 을 클릭하면, 로컬포인트가 추가됨</p>
+  </p>
+  <hr>
+  <p> "+" 을 클릭하면, 로컬포인트가 추가됨</p>
 
 
 
 
 </body>
-</html> 
 
+</html>

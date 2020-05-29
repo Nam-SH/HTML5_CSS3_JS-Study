@@ -1,32 +1,35 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>    
-  <script src='https://code.jquery.com/jquery-3.1.1.js'></script>   
+
+<head>
+  <script src='https://code.jquery.com/jquery-3.1.1.js'></script>
 </head>
+
 <body>
-<canvas id="c1" width="300" height="350" style="border:1px solid gray;"/> 
-<script>  
-  var c=document.getElementById("c1");
-  var obj=c.getContext("2d");
-  
-  var imgObj = new Image(); 
-    imgObj.src="./image/html5.png"; 
+  <canvas id="c1" width="300" height="350" style="border:1px solid gray;" />
+  <script>
+    var c = document.getElementById("c1");
+    var obj = c.getContext("2d");
 
-    imgObj.onload =  function() {
-     obj.drawImage(imgObj, 10, 10);  // 원본이미지 그리기 
-     obj.translate(150, 10) // 캔버스 이동
-     obj.drawImage(imgObj, 10, 10);    
+    var imgObj = new Image();
+    imgObj.src = "./image/html5.png";
 
-    obj.setTransform(1,0,0, 1, 0, 0);   // 캔버스변형 초기화  
-    obj.scale(0.7, 1.2);  // 캔버스 축소
-    obj.drawImage(imgObj, 10, 130);   
- 
-    obj.setTransform(1,0,0, 1, 0, 0);   // 캔버스변형 초기화  
-    obj.translate(200,180)  // 캔버스 이동 
-    obj.rotate(0.25*Math.PI) // 캔버스 회전 
-    obj.drawImage(imgObj, 0, 0);   
-   } ;     
+    imgObj.onload = function () {
+      obj.drawImage(imgObj, 10, 10); // 원본이미지 그리기 
+      obj.translate(150, 10) // 캔버스 이동
+      obj.drawImage(imgObj, 10, 10);
+
+      obj.setTransform(1, 0, 0, 1, 0, 0); // 캔버스변형 초기화  
+      obj.scale(0.7, 1.2); // 캔버스 축소
+      obj.drawImage(imgObj, 10, 130);
+
+      obj.setTransform(1, 0, 0, 1, 0, 0); // 캔버스변형 초기화  
+      obj.translate(200, 180) // 캔버스 이동 
+      obj.rotate(0.25 * Math.PI) // 캔버스 회전 
+      obj.drawImage(imgObj, 0, 0);
+    };
   </script>
-</script> 
-  </body>
-</html> 
+  </script>
+</body>
+
+</html>

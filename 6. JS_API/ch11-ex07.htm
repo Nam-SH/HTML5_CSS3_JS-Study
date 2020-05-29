@@ -1,46 +1,51 @@
 ﻿<!DOCTYPE html>
 <html>
-<head> 
-  <style>
-    #div1, #div2 {
-        width: 300px;  height: 100px; 
-        border: 1px solid black;
-    }
 
-    img { width : 50px;  height : 50px; margin : 10px;  } 
-  </style>
+<head>
+     <style>
+          #div1,
+          #div2 {
+               width: 300px;
+               height: 100px;
+               border: 1px solid black;
+          }
 
-  <script>
-    function dragstartListener(e) { 
-       e.dataTransfer.setData("text", e.target.id);
-    }
-   
-    function dragoverListener(e) { e.preventDefault(); } 
+          img {
+               width: 50px;
+               height: 50px;
+               margin: 10px;
+          }
+     </style>
 
-    function dropListener(e) {
-       e.preventDefault();
-       var data = e.dataTransfer.getData("text");
-       e.target.appendChild(document.getElementById(data));
-    }
+     <script>
+          function dragstartListener(e) {
+               e.dataTransfer.setData("text", e.target.id);
+          }
 
-  </script>
-</head> 
-<body> 
-  <p> 드래그&드롭 기능을 이용한 이미지 이동</p>
- 
-  <div id="div1" ondrop="dropListener(event);" ondragover="dragoverListener(event);">
-     <img src="./image/icon1.png" draggable="true" 
-          ondragstart="dragstartListener(event);"  id="d0" />
-     <img src="./image/icon2.png" draggable="true" 
-          ondragstart="dragstartListener(event);"  id="d1" />
-     <img src="./image/icon3.png" draggable="true" 
-          ondragstart="dragstartListener(event);"  id="d2" />
-     <img src="./image/icon4.png" draggable="true" 
-          ondragstart="dragstartListener(event);"  id="d3" /> 
-  </div> <hr> 
+          function dragoverListener(e) {
+               e.preventDefault();
+          }
 
-  <div id="div2" ondrop="dropListener(event);" 
-       ondragover="dragoverListener(event);"></div>
-</body> 
-</html> 
+          function dropListener(e) {
+               e.preventDefault();
+               var data = e.dataTransfer.getData("text");
+               e.target.appendChild(document.getElementById(data));
+          }
+     </script>
+</head>
 
+<body>
+     <p> 드래그&드롭 기능을 이용한 이미지 이동</p>
+
+     <div id="div1" ondrop="dropListener(event);" ondragover="dragoverListener(event);">
+          <img src="./image/icon1.png" draggable="true" ondragstart="dragstartListener(event);" id="d0" />
+          <img src="./image/icon2.png" draggable="true" ondragstart="dragstartListener(event);" id="d1" />
+          <img src="./image/icon3.png" draggable="true" ondragstart="dragstartListener(event);" id="d2" />
+          <img src="./image/icon4.png" draggable="true" ondragstart="dragstartListener(event);" id="d3" />
+     </div>
+     <hr>
+
+     <div id="div2" ondrop="dropListener(event);" ondragover="dragoverListener(event);"></div>
+</body>
+
+</html>

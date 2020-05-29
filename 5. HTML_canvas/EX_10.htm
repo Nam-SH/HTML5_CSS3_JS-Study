@@ -1,37 +1,43 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-  
+
 </head>
-<body  onmousedown ="down(event);"  onmousemove = "move(event);"  
-       onmouseup = "up(event);" > 
-<canvas id="c1" width="250" height="250" style="border:1px solid gray;"/> 
-<script>  
-  var c=document.getElementById("c1");
-  var obj=c.getContext("2d");
- 
-  var X=0, Y=0; 
-  obj.lineWidth="2"; obj.strokeStyle="green"; 
-  var drawState = false;  
-   
-  function down(e) { 
-    drawState = true;  
-    X=e.offsetX; Y=e.offsetY;          
-  }  
 
-  function move(e) { 
-    if (drawState) {   
-         obj.beginPath();     
-         obj.moveTo(X,Y);    
-         obj.lineTo(e.offsetX,e.offsetY);   
-         obj.stroke(); 
-         X=e.offsetX; Y=e.offsetY; 
-    } 
-  }  
+<body onmousedown="down(event);" onmousemove="move(event);" onmouseup="up(event);">
+  <canvas id="c1" width="250" height="250" style="border:1px solid gray;" />
+  <script>
+    var c = document.getElementById("c1");
+    var obj = c.getContext("2d");
 
-  function up(e) { 
-    drawState = false;  
-  }  
-</script> 
+    var X = 0,
+      Y = 0;
+    obj.lineWidth = "2";
+    obj.strokeStyle = "green";
+    var drawState = false;
+
+    function down(e) {
+      drawState = true;
+      X = e.offsetX;
+      Y = e.offsetY;
+    }
+
+    function move(e) {
+      if (drawState) {
+        obj.beginPath();
+        obj.moveTo(X, Y);
+        obj.lineTo(e.offsetX, e.offsetY);
+        obj.stroke();
+        X = e.offsetX;
+        Y = e.offsetY;
+      }
+    }
+
+    function up(e) {
+      drawState = false;
+    }
+  </script>
 </body>
-</html> 
+
+</html>

@@ -1,85 +1,142 @@
 ﻿<!DOCTYPE HTML>
 <html>
+
 <head>
-  <title> 수평메뉴 페이지 구성 </title>  
+  <title> 수평메뉴 페이지 구성 </title>
 
-  <style> 
+  <style>
     /* step 1 */
-    *  { box-sizing: border-box; }
-    #header  { background: dimgray; color: white; } 
-    #menu  {  background: #333; color: white; } 
-    #content  { background: ghostwhite; } 
-    #side  { background: Gainsboro; } 
-    #footer  { background: darkgray; }  
+    * {
+      box-sizing: border-box;
+    }
 
-     /* step 2 */
-     #content  { float: left;  width: 80%; } 
+    #header {
+      background: dimgray;
+      color: white;
+    }
 
-     /* step 3 */
-     #menu  a { color: white;} 
+    #menu {
+      background: #333;
+      color: white;
+    }
 
-     /* step 4 */
-     #footer { clear : both; }  
+    #content {
+      background: ghostwhite;
+    }
 
-     /* step 5 */ 
-     #container  { height: 380px; } 
-     #header  { height: 15%} 
-     #menu  { height: 10% }  
-     #content, #side { height: 65% }     
-     #footer  { height: 10%  } 
-   
-     /* step 6 */ 
-     iframe { margin: 0px 0px;  padding: 0px 0px;  border: 0px;  
-                float: right;  width: 100%;  height: 100% ; }  
-     #header, #side, #footer  { text-align: center; }  
- 
-     /* step 7 */     
-     #menu  {  overflow: hidden; }      
-     #menu  a { float:left;  display: block;
-         color: #f2f2f2;  text-align: center;
-         padding: 7px 10px;  text-decoration: none; }
-     #menu  a:hover { background-color: #bbb;  color: black; }
+    #side {
+      background: Gainsboro;
+    }
 
-     /* step 8 */ 
-     li { list-style-position : inside; } 
+    #footer {
+      background: darkgray;
+    }
 
- </style> 
+    /* step 2 */
+    #content {
+      float: left;
+      width: 80%;
+    }
+
+    /* step 3 */
+    #menu a {
+      color: white;
+    }
+
+    /* step 4 */
+    #footer {
+      clear: both;
+    }
+
+    /* step 5 */
+    #container {
+      height: 380px;
+    }
+
+    #header {
+      height: 15%
+    }
+
+    #menu {
+      height: 10%
+    }
+
+    #content,
+    #side {
+      height: 65%
+    }
+
+    #footer {
+      height: 10%
+    }
+
+    /* step 6 */
+    iframe {
+      margin: 0px 0px;
+      padding: 0px 0px;
+      border: 0px;
+      float: right;
+      width: 100%;
+      height: 100%;
+    }
+
+    #header,
+    #side,
+    #footer {
+      text-align: center;
+    }
+
+    /* step 7 */
+    #menu {
+      overflow: hidden;
+    }
+
+    #menu a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 7px 10px;
+      text-decoration: none;
+    }
+
+    #menu a:hover {
+      background-color: #bbb;
+      color: black;
+    }
+
+    /* step 8 */
+    li {
+      list-style-position: inside;
+    }
+  </style>
 
 </head>
 
-<body>    
- <div id="container"> 
-  <div id="header"> 웹 페이지 타이틀 </div>
-  <div id="menu"> 
-     <a href="#"> 메뉴항목 1 </a>
-     <a href="#"> 메뉴항목 2 </a>
-     <a href=""> 메뉴항목 3 </a>
-     <a href="#"> 메뉴항목 4 </a>
-     <a href="#"> 메뉴항목 5 </a>
-  </div>   
-  <div id="content">
-     <iframe  src="sample.htm" name="f1" seamless></iframe>
-  </div>  
-  <div id="side"> 참고내용 
-       <ul>         
-         <li> 참고내용 1 </li> 
-         <li> 참고내용 2 </li>
-         <li> 참고내용 3 </li> 
-         <li> 참고내용 4 </li>
-        
-       </ul> 
-  </div>  
-  <div id="footer"> 연락처 : 000-0000-0000, &nbsp;&nbsp; &copyright; &nbsp;웹-페이지 개발자  </div>
-</div>
+<body>
+  <div id="container">
+    <div id="header"> 웹 페이지 타이틀 </div>
+    <div id="menu">
+      <a href="#"> 메뉴항목 1 </a>
+      <a href="#"> 메뉴항목 2 </a>
+      <a href=""> 메뉴항목 3 </a>
+      <a href="#"> 메뉴항목 4 </a>
+      <a href="#"> 메뉴항목 5 </a>
+    </div>
+    <div id="content">
+      <iframe src="sample.htm" name="f1" seamless></iframe>
+    </div>
+    <div id="side"> 참고내용
+      <ul>
+        <li> 참고내용 1 </li>
+        <li> 참고내용 2 </li>
+        <li> 참고내용 3 </li>
+        <li> 참고내용 4 </li>
+
+      </ul>
+    </div>
+    <div id="footer"> 연락처 : 000-0000-0000, &nbsp;&nbsp; &copyright; &nbsp;웹-페이지 개발자 </div>
+  </div>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
- 

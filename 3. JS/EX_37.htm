@@ -37,26 +37,31 @@
          c.style.border = "1px red solid";
          stag.innerText = " 빨강색 박스";
       }
+
       function f2() {
          var c = document.getElementById('current');
          var stag = document.getElementById('s2');
          stag.innerText = c.previousSibling.innerText;
       }
+
       function f3() {
          var c = document.getElementById('current');
          var stag = document.getElementById('s3');
          stag.innerText = c.nextSibling.innerText;
       }
+
       function f4() {
          var c = document.getElementById('current');
          var stag = document.getElementById('s4');
          stag.innerText = c.firstChild.innerText;
       }
+
       function f5() {
          var c = document.getElementById('current');
          var stag = document.getElementById('s5');
          stag.innerText = c.childNodes[1].innerText;
       }
+
       function f6() {
          var c = document.getElementById('current');
          var stag = document.getElementById('s6');

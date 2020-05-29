@@ -1,19 +1,20 @@
 ﻿<!DOCTYPE html>
 <html>
-  <title>confirm() 함수</title>
-<body>  
-  <script>    
+<title>confirm() 함수</title>
+
+<body>
+  <script>
     // 대화상자를 통해 사용자에게 확인(YES, OK) 또는 취소(No, Cancel)의 응답을 요구하는 메시지를 제공하고 응답을 받아 반환한다.
     // 
     var answer = confirm("어두워졌습니다. 전구를 켤까요 ?");
-    if (answer == true) { 
-         document.write("<h3>전구 상태 : On</h3>");
-         document.write("<img src='./image/lighton.png'width=100  height=150 />");
+    if (answer == true) {
+      document.write("<h3>전구 상태 : On</h3>");
+      document.write("<img src='./image/lighton.png'width=100  height=150 />");
+    } else {
+      document.write("<h3>전구 상태 : Off<h3>");
+      document.write("<img src='./image/lightoff.png' width=100  height=150 />");
     }
-    else {
-        document.write("<h3>전구 상태 : Off<h3>");
-        document.write("<img src='./image/lightoff.png' width=100  height=150 />");
-    }
-  </script> 
+  </script>
 </body>
-</html> 
+
+</html>

@@ -1,5 +1,9 @@
-﻿   body { background : gold ; } 
-   h3   { background : blueviolet ; 
-          color : white ;  
-          text-align : center;      
-   } 
+﻿   body {
+          background: gold;
+   }
+
+   h3 {
+          background: blueviolet;
+          color: white;
+          text-align: center;
+   }

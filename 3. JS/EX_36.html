@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <title>컬렉션 객체의 사용</title>
+<title>컬렉션 객체의 사용</title>
+
 <body>
   <form>
     학 과 : <input type="text" name="dept" required /> &nbsp;&nbsp;&nbsp;
@@ -30,17 +31,19 @@
       var choice = new Array(); // 학생 응답
       var answer = [4, 2]; // 정답
       var major = document.getElementsByName('dept')[0].name;
-      var { name } = document.getElementsByName('sName')[0];
+      var {
+        name
+      } = document.getElementsByName('sName')[0];
       var noti = document.getElementById('result');
       var score = 0;
-      
+
       console.log(document.forms)
 
       choice.push(document.forms.q1.value)
       choice.push(document.forms.q2.value)
 
       console.log(document.querySelectorAll('div'))
-      
+
 
       for (i = 0; i < 2; i++) {
         if (parseInt(choice[i]) == parseInt(answer[i]))

@@ -1,65 +1,125 @@
 ﻿<!DOCTYPE HTML>
 <html>
+
 <head>
-  <title> 수직메뉴 페이지 구성  </title>  
+  <title> 수직메뉴 페이지 구성 </title>
 
-  <style> 
-     *  { box-sizing: border-box; }
-    #header  { background: red; color: white; } 
-    #header  { height: 30%; } 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-    #side-right  { background: skyblue; } 
+    #header {
+      background: red;
+      color: white;
+    }
 
-    #menu { background: #333; color: white; } 
-    #menu { float: left;  width: 30%; } 
-    #menu { z-index: 1;  background: #111;  overflow-x: hidden; } 
-    #menu a { display: block; color: white; } 
-    #menu a { color: white;  padding: 16px;  text-decoration: none; }
-    #menu a:hover  { background-color: #ddd;  color: black; } 
+    #header {
+      height: 30%;
+    }
 
-    #content  { background: ghostwhite; } 
-    #content  { float: left;  width: 60%; } 
+    #side-right {
+      background: skyblue;
+    }
 
-    #footer  { background: darkgray; }
-    #footer { clear : both; }
-    #footer  { height: 10%; }
+    #menu {
+      background: #333;
+      color: white;
+    }
 
-    #container  { height: 400px; } 
-    #menu, #content, #side-right  { height: 75% } 
-    #header, #menu, #side-right, #footer  { text-align: Center; }   
+    #menu {
+      float: left;
+      width: 30%;
+    }
 
-    iframe { margin: 0px 0px; padding: 0px 0px; border: 0px;  
-             width: 100%; height: 100%; background-color: yellow; } 
+    #menu {
+      z-index: 1;
+      background: #111;
+      overflow-x: hidden;
+    }
 
-  </style> 
+    #menu a {
+      display: block;
+      color: white;
+    }
+
+    #menu a {
+      color: white;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    #menu a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    #content {
+      background: ghostwhite;
+    }
+
+    #content {
+      float: left;
+      width: 60%;
+    }
+
+    #footer {
+      background: darkgray;
+    }
+
+    #footer {
+      clear: both;
+    }
+
+    #footer {
+      height: 10%;
+    }
+
+    #container {
+      height: 400px;
+    }
+
+    #menu,
+    #content,
+    #side-right {
+      height: 75%
+    }
+
+    #header,
+    #menu,
+    #side-right,
+    #footer {
+      text-align: Center;
+    }
+
+    iframe {
+      margin: 0px 0px;
+      padding: 0px 0px;
+      border: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: yellow;
+    }
+  </style>
 
 </head>
 
-<body>   
-<div id="container" >  
- <div id="header"> Header </div>
-  <div id="menu"> 
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-  </div>     
-  <div id="content">
+<body>
+  <div id="container">
+    <div id="header"> Header </div>
+    <div id="menu">
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+    </div>
+    <div id="content">
       <iframe src="sample.htm" name="maincontent" seamless></iframe>
-  </div>  
-  <div id="side-right"> Side(right) </div>  
-  <div id="footer"> Footer </div>
-</div>
+    </div>
+    <div id="side-right"> Side(right) </div>
+    <div id="footer"> Footer </div>
+  </div>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
- 

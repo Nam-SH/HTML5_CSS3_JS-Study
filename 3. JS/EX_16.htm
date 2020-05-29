@@ -1,21 +1,23 @@
 ﻿<!DOCTYPE html>
 <html>
-   <title>for 문의 중첩</title>
-<body>  
-  <script>
-     document.write("<table border=1  text-align=center>");  
-     document.write("<tr><td> n </td><td>n 제곱</td><td>n 세제곱</td><td>n 네제곱</td></tr>"); 
-     for (n=1; n<=5; n++) {
-        document.write("<tr>"); 
-        result = n;  
-        document.write("<td>" + result + "</td>"); 
-        for (k=2; k<5; k++) {
-           result = result * n ; 
-           document.write("<td>" + result + "</td>"); 
-        } 
-        document.write("</tr>"); 
-     } 
-     document.write("</table>");  
-  </script> 
+<title>for 문의 중첩</title>
+
+<body>
+   <script>
+      document.write("<table border=1  text-align=center>");
+      document.write("<tr><td> n </td><td>n 제곱</td><td>n 세제곱</td><td>n 네제곱</td></tr>");
+      for (n = 1; n <= 5; n++) {
+         document.write("<tr>");
+         result = n;
+         document.write("<td>" + result + "</td>");
+         for (k = 2; k < 5; k++) {
+            result = result * n;
+            document.write("<td>" + result + "</td>");
+         }
+         document.write("</tr>");
+      }
+      document.write("</table>");
+   </script>
 </body>
-</html> 
+
+</html>

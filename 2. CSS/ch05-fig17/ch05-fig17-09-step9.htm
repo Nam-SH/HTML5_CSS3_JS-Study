@@ -1,121 +1,172 @@
 ﻿<!DOCTYPE HTML>
 <html>
+
 <head>
-  <title>Layout Step 9</title>  
+  <title>Layout Step 9</title>
 
-  <style> 
-     *  { box-sizing: border-box; }
-    #header  { background: dimgray; color: white;             
-               line-height : 60px;               
-               border-top-left-radius : 60px 30px;
-               border-top-right-radius : 60px 30px;
-               border-bottom-right-radius : 30px 60px;
-               border-bottom-left-radius : 30px 60px;   
-               box-shadow : 5px -5px  darkgray ;              
-    } 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-    #menu  {  background: white;
-              color: black; 
-              margin-top : 5px;  
-    } 
+    #header {
+      background: dimgray;
+      color: white;
+      line-height: 60px;
+      border-top-left-radius: 60px 30px;
+      border-top-right-radius: 60px 30px;
+      border-bottom-right-radius: 30px 60px;
+      border-bottom-left-radius: 30px 60px;
+      box-shadow: 5px -5px darkgray;
+    }
 
-    
-    #content  { background: ghostwhite;  
-                margin-top : 5px;  margin-right : 5px; 
-                 border-radius : 10px; 
-    } 
- 
-    #side { background: Gainsboro;   
-            padding-top : 20px;            
-            margin-top : 5px;   
-            border-radius : 10px;  float: left;
-            margin-bottom : 5px; 
-           
-    } 
+    #menu {
+      background: white;
+      color: black;
+      margin-top: 5px;
+    }
 
-    #footer  { background: darkgray; 
-               line-height : 40px; 
-               margin-top : 5px; 
-               border-radius : 10px; 
-    }   
+
+    #content {
+      background: ghostwhite;
+      margin-top: 5px;
+      margin-right: 5px;
+      border-radius: 10px;
+    }
+
+    #side {
+      background: Gainsboro;
+      padding-top: 20px;
+      margin-top: 5px;
+      border-radius: 10px;
+      float: left;
+      margin-bottom: 5px;
+
+    }
+
+    #footer {
+      background: darkgray;
+      line-height: 40px;
+      margin-top: 5px;
+      border-radius: 10px;
+    }
 
     /* step-2 */
-    #menu  { float: left;  width: 20%; } 
-    #content  { float: left;  width: 59%; } 
-    #side  { float: left;  width: 20%; } 
-   
+    #menu {
+      float: left;
+      width: 20%;
+    }
+
+    #content {
+      float: left;
+      width: 59%;
+    }
+
+    #side {
+      float: left;
+      width: 20%;
+    }
+
     /* step-3 */
-    #menu  a  { display: block;           
-          background: dimgray;
-          margin : 5px;
-          border-radius : 40px; 
-          color: white;  padding: 16px;  text-decoration: none;
-          text-shadow : 2px 2px 5px blue;  
-    } 
+    #menu a {
+      display: block;
+      background: dimgray;
+      margin: 5px;
+      border-radius: 40px;
+      color: white;
+      padding: 16px;
+      text-decoration: none;
+      text-shadow: 2px 2px 5px blue;
+    }
 
     /* step-4 */
-    #footer { clear : both; }    
+    #footer {
+      clear: both;
+    }
 
     /* step 5 */
-    #container  { height: 400px; } 
-    #header  { height: 15%; } 
-    #menu, #content, #side { height: 75% } 
-    #footer  { height: 10%; } 
+    #container {
+      height: 400px;
+    }
 
-    /* step 6 */ 
-    iframe { margin: 0px 0px; padding: 0px 0px; border: 0px;  
-             width: 100%; height : 100% ;
-           } 
-    #header, #menu, #s1,  #footer  { text-align: center; }   
-   
+    #header {
+      height: 15%;
+    }
+
+    #menu,
+    #content,
+    #side {
+      height: 75%
+    }
+
+    #footer {
+      height: 10%;
+    }
+
+    /* step 6 */
+    iframe {
+      margin: 0px 0px;
+      padding: 0px 0px;
+      border: 0px;
+      width: 100%;
+      height: 100%;
+    }
+
+    #header,
+    #menu,
+    #s1,
+    #footer {
+      text-align: center;
+    }
+
     /* step 7 */
-    #menu { z-index: 1;    overflow-x: hidden; } 
-  
-    #menu a:hover  { background-color: #ddd;  color: black; } 
-     
-    /* step 7 */ 
-   
+    #menu {
+      z-index: 1;
+      overflow-x: hidden;
+    }
 
-    h1 {  text-shadow : 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; 
-     
-    } 
+    #menu a:hover {
+      background-color: #ddd;
+      color: black;
+    }
 
-  </style> 
+    /* step 7 */
+
+
+    h1 {
+      text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
+    }
+  </style>
 
 </head>
 
-<body>   
-<div id="container" >  
-  <div id="header"> <h1 > 웹 페이지 타이틀 <h1>  </div> 
-  <div id="menu"> 
-    <a href="#"> 메뉴항목 1 </a>
-    <a href="#"> 메뉴항목 2 </a>
-    <a href="#"> 메뉴항목 3 </a>
-    <a href="#"> 메뉴항목 4 </a>
-    <a href="#"> 메뉴항목 5 </a>
-  </div>     
-  <div id="content">
+<body>
+  <div id="container">
+    <div id="header">
+      <h1> 웹 페이지 타이틀 <h1>
+    </div>
+    <div id="menu">
+      <a href="#"> 메뉴항목 1 </a>
+      <a href="#"> 메뉴항목 2 </a>
+      <a href="#"> 메뉴항목 3 </a>
+      <a href="#"> 메뉴항목 4 </a>
+      <a href="#"> 메뉴항목 5 </a>
+    </div>
+    <div id="content">
       <iframe src="sample.htm" name="maincontent" seamless></iframe>
-  </div>  
-  <div id="side"> <div id="s1">참고내용</div> 
-     <ul>        
-        <li>참고내용 1</li> 
+    </div>
+    <div id="side">
+      <div id="s1">참고내용</div>
+      <ul>
+        <li>참고내용 1</li>
         <li>참고내용 2</li>
-        <li>참고내용 3</li> 
+        <li>참고내용 3</li>
         <li>참고내용 4</li>
-     </ul> 
-   </div>  
-  <div id="footer"> 연락처 : 000-0000-0000 &nbsp; &nbsp; &copyright; &nbsp; 웹-페이지 개발자 </div>
-</div>
+      </ul>
+    </div>
+    <div id="footer"> 연락처 : 000-0000-0000 &nbsp; &nbsp; &copyright; &nbsp; 웹-페이지 개발자 </div>
+  </div>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
- 
