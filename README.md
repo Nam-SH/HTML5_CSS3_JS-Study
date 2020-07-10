@@ -2,7 +2,8 @@
 
 ## 0. 서론
 
-
+- HTML5, CSS, JavaScript 공부한 파일입니다.
+- 교재: [북스홀릭퍼블리싱]CSS3+JavaScript와 함께 하는 HTML5 웹 프로그래밍
 
 ## 1. HTML
 
