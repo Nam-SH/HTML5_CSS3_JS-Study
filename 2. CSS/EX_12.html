@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <title> 메뉴 리스트 작성(수평) </title>
+  <style>
+    @import url(EX_12.css);
+  </style>
+
+</head>
+
+<body>
+  <h3> HTML 태그의 기본 박스 유형 </h3>
+  <ol>
+    <li> 블록 박스: h1태그와 ul태그 </li>
+    <li> 인라인 박스: span태그 </li>
+    <li> 인라인-블록 박스: img태그 </li>
+    <li> 리스트 항목: li태그 </li>
+    <li> 테이블: table태그 </li>
+    <li> 테이블-셀: td태그 </li>
+    <li> 없음: br태그 </li>
+  </ol>
+
+  <hr>
+
+  <h3> 메뉴리스트 수평 출력 </h3>
+  <ul id="b1">
+    <li id="b1"><a id="b1" href="#home">Home</a></li>
+    <li id="b1"><a id="b1" href="#html">HTML5</a></li>
+    <li id="b1"><a id="b1">CSS3</a></li>
+    <li id="b1"><a id="b1" href="#js">Javascript</a> </li>
+  </ul>
+
+  <hr>
+
+  <h3> 메뉴리스트 수직 출력 </h3>
+  <ul id="b2">
+    <li id="b2"><a id="b2" href="#home">Home</a></li>
+    <li id="b2"><a id="b2" href="#html">HTML5</a></li>
+    <li id="b2"><a id="b2">CSS3</a></li>
+    <li id="b2"><a id="b2" href="#js">Javascript</a> </li>
+  </ul>
+
+  <hr>
+
+  <h3> 자식박스의 수평배열 </h3>
+  <div id="parent">
+    <div class="child"> 메뉴항목1 </div>
+    <div class="child"> 메뉴항목2 </div>
+    <div class="child"> 메뉴항목3 </div>
+    <div class="child"> 메뉴항목4 </div>
+  </div>
+
+  <hr>
+
+  <h3>모든 박스의 정적 위치</h3>
+  <div id="b3">박스3</div>
+  <div id="container">
+    <div id="b4">박스4</div>
+    <div id="b5">박스5</div>
+    <div id="b6">박스6</div>
+  </div>
+  <div id="b7">박스7</div>
+
+  <hr>
+
+  <h3>모든 박스의 정적 위치(container: absolute)</h3>
+  <div id="b3">박스3</div>
+  <div id="container_absolute">
+    <div id="b4">박스4</div>
+    <div id="b5">박스5</div>
+    <div id="b6">박스6</div>
+  </div>
+  <div id="b7">박스7</div>
+
+  <hr style="margin-top: 200px;">
+
+  <h3> 상대 배치(relative)</h3>
+  <div id="b3">박스3</div>
+  <div id="container_relative">
+    <div id="b4">박스4</div>
+    <div id="b5_relative">박스5</div>
+    <div id="b6">박스6</div>
+  </div>
+  <div id="b7">박스7</div>
+
+  <hr>
+
+  <h3> 절대 배치(absolute) </h3>
+  <div id="b3">박스3</div>
+  <div id="container">
+    <div id="b4">박스4</div>
+    <div id="b5_absolute"> b5_absolute => 박스5</div>
+    <div id="b6">박스6</div>
+  </div>
+  <div id="b7">박스7</div>
+
+  <hr>
+
+  <h3> 절대 배치(absolute), container_absolute </h3>
+  <div id="b3">박스3</div>
+  <div id="container_absolute">
+    <div id="b4">박스4</div>
+    <div id="b5_absolute">박스5</div>
+    <div id="b6">박스6</div>
+  </div>
+  <div id="b7">박스7</div>
+
+  <hr style="margin-top: 200px;">
+
+  <h3> 고정 배치(fixed) </h3>
+  <div id="b3">박스3</div>
+  <div id="container">
+    <div id="b4">박스4</div>
+    <div id="b5_fixed">b5_fixed => 박스5</div>
+    <div id="b6">박스6</div>
+  </div>
+  <div id="b7">박스7</div>
+
+</body>
+
+</html>

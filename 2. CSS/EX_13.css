@@ -1,0 +1,30 @@
+#parent2 {
+  background: gray;
+  width: 200px;
+  height: 50px;
+  position: relative;
+}
+
+#child2 {
+  width: 150px;
+  position: absolute;
+  top: 40px;
+  left: 25%;
+  display: none;
+}
+
+.menu {
+  background: rgb(214, 7, 7);
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+#parent2:hover #child2 {
+  display: block;
+}
+
+#child2 .menu:hover {
+  background: skyblue;
+}
